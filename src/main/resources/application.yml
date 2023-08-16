@@ -6,7 +6,14 @@ spring:
     activate:
       on-profile: dev
 
+#spring:
+#    profiles:
+#        active: dev
+
 ---
+
+#spring:
+#  profiles: dev
 spring:
   config:
     activate:
@@ -22,6 +29,14 @@ spring:
     show-sql: true
 welcome:
   message: '"Hello Guys!!"'
+
+# actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
 
 ---
 spring:
